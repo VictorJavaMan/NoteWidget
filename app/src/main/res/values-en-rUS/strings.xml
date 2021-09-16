@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name = "app_name"> Reminder </string>
+    <string name = "input_text"> Enter your note text </string>
+    <string name = "select_image"> Select note template </string>
+    <string name = "imtext_1"> Scroll №1 </string>
+    <string name = "imtext_2"> Scroll №2 </string>
+    <string name = "imtext_3"> Sticker №1 </string>
+    <string name = "imtext_4"> Sticker №2 </string>
+    <string name = "select_sizetext">Text size</string>
+    <string name = "select_colortext"> Text color </string>
+    <string name = "select_colorback"> Background color </string>
+    <string name = "addwidget_bt"> Add widget </string>
+    <string name = "about_bt"> About the program </string>
+    <string name = "clear_bt"> Clear input field </string>
+    <string name = "lang_bt">Change language</string>
+    <string name = "l_gray"> Gray </string>
+    <string name = "l_blue"> Blue </string>
+    <string name = "l_green"> Green </string>
+    <string name = "l_orange"> Orange </string>
+    <string name = "l_purple"> Purple </string>
+    <string name = "l_red"> Red </string>
+    <string name = "l_white"> White </string>
+    <string name = "l_yellow"> Yellow </string>
+    <string name = "title_alert"> Notification </string>
+    <string name = "body_alert"> The widget was developed by Viktor Mikryukov, Russia. </string>
+</resources>

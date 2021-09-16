@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Напоминалка</string>
+    <string name="input_text">Введите текст заметки</string>
+    <string name="select_image">Выберите шаблон заметки</string>
+    <string name="imtext_1">Свиток №1</string>
+    <string name="imtext_2">Свиток №2</string>
+    <string name="imtext_3">Стикер №1</string>
+    <string name="imtext_4">Стикер №2</string>
+    <string name="select_sizetext">Размер текста</string>
+    <string name="select_colortext">Цвет текста</string>
+    <string name="select_colorback">Цвет фона</string>
+    <string name="addwidget_bt">Добавить виджет</string>
+    <string name="about_bt">О программе</string>
+    <string name="clear_bt">Очистить поле ввода</string>
+    <string name="lang_bt">Изменить язык текста</string>
+    <string name="l_gray">Серый</string>
+    <string name="l_blue">Синий</string>
+    <string name="l_green">Зеленый</string>
+    <string name="l_orange">Оранжевый</string>
+    <string name="l_purple">Фиолетовый</string>
+    <string name="l_red">Красный</string>
+    <string name="l_white">Белый</string>
+    <string name="l_yellow">Желтый</string>
+    <string name="title_alert">Уведомление</string>
+    <string name="body_alert">Виджет разработал Микрюков Виктор, Россия.</string>
+</resources>
