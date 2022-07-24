@@ -23,11 +23,11 @@ public class SlideAdapter extends PagerAdapter {
         this.context = context;
     }
 
-    public int[] list_images = { R.drawable.sv_1_d, R.drawable.sv_3_d, R.drawable.vis_1_d, R.drawable.vis_2_d };
+    public int[] list_images = { R.drawable.sv_1_d, R.drawable.sv_3_d, R.drawable.vis_1_d, R.drawable.vis_2_d, R.drawable.spec_1_d };
 
     @Override
     public int getCount() {
-        return 4;
+        return 5;
     }
 
     @Override

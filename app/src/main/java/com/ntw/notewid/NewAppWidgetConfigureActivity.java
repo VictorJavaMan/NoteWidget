@@ -3,6 +3,8 @@ package com.ntw.notewid;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.appwidget.AppWidgetManager;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -21,6 +23,7 @@ import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.viewpager.widget.ViewPager;
 
@@ -159,9 +162,17 @@ public class NewAppWidgetConfigureActivity extends Activity {
         button_lang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String str = textArea.getText().toString();
-                textArea.setText(TableSymbols.convertLang(str));
-                textArea.setSelection(textArea.getText().length());
+                try {
+                    String str = textArea.getText().toString();
+                    textArea.setText(TableSymbols.convertLang(str));
+                    textArea.setSelection(textArea.getText().length());
+
+                    ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                    ClipData clip = ClipData.newPlainText("", textArea.getText().toString());
+                    clipboard.setPrimaryClip(clip);
+
+                    Toast.makeText(getApplicationContext(), "Текст преобразован и скопирован в буфер обмена", Toast.LENGTH_SHORT).show();
+                } catch (Exception e) { e.printStackTrace(); }
             }
         });
 
@@ -169,7 +180,7 @@ public class NewAppWidgetConfigureActivity extends Activity {
         Resources resources = NewAppWidgetConfigureActivity.this.getResources();
         String[] data_textcolor = { resources.getString(R.string.l_gray), resources.getString(R.string.l_blue), resources.getString(R.string.l_green), resources.getString(R.string.l_orange), resources.getString(R.string.l_purple),  resources.getString(R.string.l_red),  resources.getString(R.string.l_white),  resources.getString(R.string.l_yellow) };
         String[] data_backcolor = { resources.getString(R.string.l_white), resources.getString(R.string.l_gray), resources.getString(R.string.l_green), resources.getString(R.string.l_orange), resources.getString(R.string.l_purple),  resources.getString(R.string.l_red),  resources.getString(R.string.l_blue),  resources.getString(R.string.l_yellow) };
-        list_description = new String[]{resources.getString(R.string.imtext_1), resources.getString(R.string.imtext_2), resources.getString(R.string.imtext_3), resources.getString(R.string.imtext_4)};
+        list_description = new String[]{resources.getString(R.string.imtext_1), resources.getString(R.string.imtext_2), resources.getString(R.string.imtext_3), resources.getString(R.string.imtext_4), resources.getString(R.string.imtext_4)};
 
         ArrayAdapter<String> adapterColorText = new ArrayAdapter<>(this, R.layout.spinner_list, data_textcolor);
         adapterColorText.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -249,7 +260,7 @@ public class NewAppWidgetConfigureActivity extends Activity {
     };
 
     public void adddots(int i) {
-        mdots = new TextView[4];
+        mdots = new TextView[5];
         liner.removeAllViews();
         for (int x = 0; x < mdots.length; x++) {
             mdots[x] = new TextView(this);

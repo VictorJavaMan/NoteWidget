@@ -173,24 +173,28 @@ public class NewAppWidget extends AppWidgetProvider {
             result = "vis_1_";
         } else if (position_image == 3) {
             result = "vis_2_";
+        } else if (position_image == 4) {
+            result = "spec_1_d";
         }
 
-        if (position_color == 0) {
-            result += "w";
-        } else if (position_color == 1) {
-            result += "d";
-        } else if (position_color == 2) {
-            result += "g";
-        } else if (position_color == 3) {
-            result += "o";
-        } else if (position_color == 4) {
-            result += "p";
-        } else if (position_color == 5) {
-            result += "r";
-        } else if (position_color == 6) {
-            result += "b";
-        } else if (position_color == 7) {
-            result += "y";
+        if (position_image != 4) {
+            if (position_color == 0) {
+                result += "w";
+            } else if (position_color == 1) {
+                result += "d";
+            } else if (position_color == 2) {
+                result += "g";
+            } else if (position_color == 3) {
+                result += "o";
+            } else if (position_color == 4) {
+                result += "p";
+            } else if (position_color == 5) {
+                result += "r";
+            } else if (position_color == 6) {
+                result += "b";
+            } else if (position_color == 7) {
+                result += "y";
+            }
         }
 
         return context.getApplicationContext().getResources().getIdentifier(result, "drawable", context.getApplicationContext().getPackageName());
